@@ -1,0 +1,9 @@
+<main class="main">
+    <header class="header">
+        <button  type="button" class="btn btn-primary" (click)="activateRout(item)" *ngFor="let item of list">{{item.name}}</button>
+    </header>
+    <section class="body">
+        <router-outlet>
+        </router-outlet>
+    </section>
+</main>
