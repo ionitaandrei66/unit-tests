@@ -11,7 +11,7 @@ export class AppComponent {
       url:'forms',name: 'Reactive Forms Test'
     }];
     constructor(private router: Router) {
-    }
+     }
 
     activateRout(item:routerModel) {
         this.router.navigateByUrl(item.url);

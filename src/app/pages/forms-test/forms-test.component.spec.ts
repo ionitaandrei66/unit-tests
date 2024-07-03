@@ -7,7 +7,7 @@ import {of} from "rxjs";
 import {By} from "@angular/platform-browser";
 import {DebugElement} from "@angular/core";
 
-fdescribe('FormsTestComponent', () => {
+describe('FormsTestComponent', () => {
   let component: FormsTestComponent;
   let fixture: ComponentFixture<FormsTestComponent>;
   let mainService: HttpMethodsService;
@@ -28,11 +28,11 @@ fdescribe('FormsTestComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  fit('valid form and register', () => {
+  it('valid form and register', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('should set openNotification and notificationMessage on successful getAuth', () => {
+  it('should set openNotification and notificationMessage on successful getAuth', () => {
       const mockData: AuthModel | null={
           username: 'user',
           password: 'alibaba',
@@ -53,7 +53,7 @@ fdescribe('FormsTestComponent', () => {
     expect(element).toBeTruthy();
   });
 
-  fit('register method', () => {
+  it('register method', () => {
     let passwordErrorElement = fixture.nativeElement.querySelector('#PasswordHelp');
     let minLengthErrorElement = fixture.nativeElement.querySelector('#PasswordHelp2');
     expect(passwordErrorElement.style.color).toEqual('red');
